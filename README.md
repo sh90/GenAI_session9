@@ -1,5 +1,4 @@
-# 🧠 GenAI Module — Session 2  
-### *Prompt Engineering*
+# 🧠 GenAI Module — Session 9
 
 ---
 
@@ -78,5 +77,6 @@ Add your keys or credentials inside the `.env` file as required.
   which uv      # macOS/Linux
   where uv      # Windows
   ```
+
 
 
