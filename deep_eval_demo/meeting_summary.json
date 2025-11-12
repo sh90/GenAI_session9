@@ -1,0 +1,24 @@
+{
+  "summary": "**Overview:**  \nThe meeting focused on addressing mixed feedback regarding the customer support assistant's performance, particularly concerning response speed and accuracy. The team discussed potential solutions to improve user experience while balancing speed and reliability.\n\n**Key Decisions:**  \n- Continue using GPT-4o as the primary model due to its speed.  \n- Implement Claude 3 as a fallback option for low-confidence responses.  \n- Explore embedding similarity to measure response confidence.  \n- Utilize prompt tuning with example replies to enhance the assistant's tone and empathy.  \n- Introduce a fallback banner for low-confidence responses to guide users.\n\n**Risks/Blockers:**  \n- Increased latency with Claude 3 may frustrate users.  \n- Lack of current metrics to measure response quality and confidence.  \n- Cost concerns related to embedding usage and model fine-tuning.\n\n**Next Steps:**  \n- Maya to prioritize building the similarity scoring metric and test the hybrid model approach.  \n- Ethan to coordinate with design on fallback UX messaging.  \n- Schedule a follow-up meeting next week to review progress.",
+  "action_items": [
+    {
+      "owner": "Maya",
+      "task": "Build similarity metric for confidence scoring",
+      "due_date": "null",
+      "priority": "High"
+    },
+    {
+      "owner": "Maya",
+      "task": "Set up a test run for the hybrid model approach using GPT-4o and Claude",
+      "due_date": "null",
+      "priority": "High"
+    },
+    {
+      "owner": "Ethan",
+      "task": "Sync with design on fallback UX messaging",
+      "due_date": "null",
+      "priority": "Medium"
+    }
+  ],
+  "source_file": "C:\\Users\\shikha\\PycharmProjects\\GenAI_session9\\deep_eval_demo\\meeting_transcript.txt"
+}

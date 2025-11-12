@@ -1,0 +1,92 @@
+{
+  "summary_eval": {
+    "test_results": [
+      {
+        "name": "test_case_0",
+        "success": false,
+        "metrics_data": [
+          {
+            "name": "Summary Concision [GEval]",
+            "threshold": 0.8,
+            "success": false,
+            "score": 0.7123694730628934,
+            "reason": "The summary effectively captures the essential points of the team's discussion, including the comparison of AI models and the decisions made regarding a hybrid approach. It outlines the responsibilities assigned to Maya and Ethan, but it lacks specific deadlines for the tasks, which is a key element in the evaluation steps. There is minimal repetition, and the focus remains clear, although the summary could be slightly more concise.",
+            "strict_mode": false,
+            "evaluation_model": "gpt-4o-mini",
+            "error": null,
+            "evaluation_cost": 0.00019394999999999997,
+            "verbose_logs": "Criteria:\nIs the summary concise and focused on essential points (decisions, blockers, owners, deadlines)? Avoid repetition/irrelevant detail; 8–12 sentences acceptable. \n \nEvaluation Steps:\n[\n    \"Check if the summary contains 8-12 sentences that capture the essential points.\",\n    \"Identify if the summary clearly outlines decisions made, blockers encountered, owners responsible, and deadlines set.\",\n    \"Evaluate the summary for any repetition or irrelevant details that detract from the main points.\",\n    \"Ensure that the summary maintains a concise focus without unnecessary elaboration.\"\n] \n \nRubric:\nNone \n \nScore: 0.7123694730628934"
+          },
+          {
+            "name": "Summary Coverage [GEval]",
+            "threshold": 0.8,
+            "success": true,
+            "score": 0.9277619460983113,
+            "reason": "The summary effectively captures the major topics discussed in the transcripts, including hallucinations, the comparison of GPT-4o and Claude, the hybrid approach, and the tasks assigned to Maya and Ethan. It also mentions the exploration of prompt tuning. However, it lacks a mention of the absence of specific deadlines for the tasks, which could have provided additional context regarding the urgency of the actions discussed.",
+            "strict_mode": false,
+            "evaluation_model": "gpt-4o-mini",
+            "error": null,
+            "evaluation_cost": 0.00018224999999999998,
+            "verbose_logs": "Criteria:\nDoes the summary capture the major topics that appear in the transcripts? If important items are missing, score lower. \n \nEvaluation Steps:\n[\n    \"Identify the major topics present in the transcripts.\",\n    \"Compare the identified topics with those included in the summary.\",\n    \"Note any important topics from the transcripts that are missing in the summary.\",\n    \"Score the summary based on the completeness of the captured topics relative to the transcripts.\"\n] \n \nRubric:\nNone \n \nScore: 0.9277619460983113"
+          }
+        ],
+        "conversational": false,
+        "multimodal": false,
+        "input": "Team discussed hallucinations, compared GPT-4o vs Claude, decided to try a hybrid approach. Maya to build a similarity metric for confidence scoring; also run a hybrid trial. Ethan to sync with design for fallback UX. Prompt tuning planned.",
+        "actual_output": "The team discussed the issue of hallucinations in AI models and compared the capabilities of GPT-4o and Claude. They decided to implement a hybrid approach to address these challenges. Maya was assigned the task of building a similarity metric for confidence scoring and will also conduct a hybrid trial to evaluate its effectiveness. Ethan will coordinate with the design team to develop a fallback user experience (UX) in case of issues. Additionally, the team plans to explore prompt tuning as part of their strategy. No specific deadlines were mentioned for these tasks.",
+        "expected_output": null,
+        "context": null,
+        "retrieval_context": null,
+        "turns": null,
+        "additional_metadata": null
+      }
+    ],
+    "confident_link": null,
+    "test_run_id": null
+  },
+  "action_items_eval": {
+    "test_results": [
+      {
+        "name": "test_case_0",
+        "success": false,
+        "metrics_data": [
+          {
+            "name": "Action Item Quality [GEval]",
+            "threshold": 0.8,
+            "success": false,
+            "score": 0.6150801977023038,
+            "reason": "The action items include explicit owners and task descriptions, which is a strength. However, all items lack due dates, which is a significant shortcoming. The tasks are relevant to the discussion, but the vagueness of the due dates and the lack of clarity in the priority levels for some tasks detracts from their overall effectiveness.",
+            "strict_mode": false,
+            "evaluation_model": "gpt-4o-mini",
+            "error": null,
+            "evaluation_cost": 0.0002136,
+            "verbose_logs": "Criteria:\nAre action items accurate and useful? Prefer items with explicit owner, task, due_date (or null), and priority. Penalize hallucinated tasks not supported by the transcripts. \n \nEvaluation Steps:\n[\n    \"Check if each action item includes an explicit owner, task description, due_date, and priority; mark as accurate if all elements are present.\",\n    \"Verify that the action items are relevant and useful based on the context of the transcripts; penalize items that do not align with the discussion.\",\n    \"Identify any hallucinated tasks that are not supported by the transcripts; these should be marked as inaccurate.\",\n    \"Assess the clarity and specificity of each action item; prioritize those that are clearly defined over vague or ambiguous tasks.\"\n] \n \nRubric:\nNone \n \nScore: 0.6150801977023038"
+          },
+          {
+            "name": "Action Item Structure [GEval]",
+            "threshold": 0.8,
+            "success": false,
+            "score": 0.7632407339068459,
+            "reason": "The output is a valid JSON array and contains all required keys: owner, task, due_date, and priority for each object. However, the due_date values are all null, which may indicate incomplete information regarding deadlines. This affects the overall completeness of the data, leading to a slightly lower score.",
+            "strict_mode": false,
+            "evaluation_model": "gpt-4o-mini",
+            "error": null,
+            "evaluation_cost": 0.00018465,
+            "verbose_logs": "Criteria:\nIs the output a valid JSON array of objects, each containing keys: owner, task, due_date, priority? If not strictly valid or keys missing, score lower. \n \nEvaluation Steps:\n[\n    \"Check if the output is a valid JSON array.\",\n    \"Verify that each object in the array contains the keys: owner, task, due_date, and priority.\",\n    \"Score higher for outputs that are strictly valid and contain all required keys, and lower for those that are missing keys or are not valid JSON.\",\n    \"Compare outputs based on the completeness and validity of the JSON structure to determine relative scores.\"\n] \n \nRubric:\nNone \n \nScore: 0.7632407339068459"
+          }
+        ],
+        "conversational": false,
+        "multimodal": false,
+        "input": "Team discussed hallucinations, compared GPT-4o vs Claude, decided to try a hybrid approach. Maya to build a similarity metric for confidence scoring; also run a hybrid trial. Ethan to sync with design for fallback UX. Prompt tuning planned.",
+        "actual_output": "[\n  {\"owner\":\"Maya\", \"task\":\"build a similarity metric for confidence scoring\", \"due_date\":null, \"priority\":\"High\"},\n  {\"owner\":\"Maya\", \"task\":\"run a hybrid trial\", \"due_date\":null, \"priority\":\"High\"},\n  {\"owner\":\"Ethan\", \"task\":\"sync with design for fallback UX\", \"due_date\":null, \"priority\":\"Medium\"},\n  {\"owner\":\"Team\", \"task\":\"plan prompt tuning\", \"due_date\":null, \"priority\":\"Medium\"}\n]",
+        "expected_output": null,
+        "context": null,
+        "retrieval_context": null,
+        "turns": null,
+        "additional_metadata": null
+      }
+    ],
+    "confident_link": null,
+    "test_run_id": null
+  }
+}
